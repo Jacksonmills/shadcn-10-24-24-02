@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FileIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   return (
@@ -30,13 +31,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
+            <FileIcon />
             Deploy now
           </a>
           <a
