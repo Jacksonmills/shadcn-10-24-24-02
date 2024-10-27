@@ -41,13 +41,13 @@ const SidebarContext = React.createContext<SidebarContext | null>(null);
 function useSidebar() {
   const context = React.useContext(SidebarContext);
   if (!context) {
-    throw new Error("useSidebar must be used within a SidebarProvider.");
+    throw new Error("useSidebar must be used within a SidebarClientProvider.");
   }
 
   return context;
 }
 
-const SidebarProvider = React.forwardRef<
+const SidebarClientProvider = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> & {
     defaultOpen?: boolean;
@@ -153,7 +153,7 @@ const SidebarProvider = React.forwardRef<
     );
   }
 );
-SidebarProvider.displayName = "SidebarProvider";
+SidebarClientProvider.displayName = "SidebarClientProvider";
 
 const Sidebar = React.forwardRef<
   HTMLDivElement,
@@ -754,7 +754,7 @@ export {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-  SidebarProvider,
+  SidebarClientProvider,
   SidebarRail,
   SidebarSeparator,
   SidebarTrigger,

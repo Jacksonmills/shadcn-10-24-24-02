@@ -1,8 +1,8 @@
 import { cookies } from "next/headers";
-import { SidebarProvider } from "./ui/sidebar";
-import { AppSidebar } from "./app-sidebar";
+import { SidebarClientProvider } from ".";
+import React from "react";
 
-export async function ServerSidebarProvider({
+export async function SidebarProvider({
   children,
 }: {
   children: React.ReactNode;
@@ -16,9 +16,8 @@ export async function ServerSidebarProvider({
   }
 
   return (
-    <SidebarProvider defaultOpen={defaultOpen}>
-      <AppSidebar />
+    <SidebarClientProvider defaultOpen={defaultOpen}>
       {children}
-    </SidebarProvider>
+    </SidebarClientProvider>
   );
 }
