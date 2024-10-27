@@ -1,6 +1,5 @@
 import { cookies } from "next/headers";
 import { SidebarClientProvider } from ".";
-import React from "react";
 
 export async function SidebarProvider({
   children,
