@@ -1,5 +1,5 @@
-import { cookies } from "next/headers";
-import { SidebarClientProvider } from ".";
+import { cookies } from 'next/headers';
+import { SidebarClientProvider } from '.';
 
 export async function SidebarProvider({
   children,
@@ -7,11 +7,11 @@ export async function SidebarProvider({
   children: React.ReactNode;
 }) {
   const cookieState = await cookies();
-  const state = cookieState.get("sidebar:state");
+  const state = cookieState.get('sidebar:state');
 
   let defaultOpen = true;
   if (state) {
-    defaultOpen = state.value === "true";
+    defaultOpen = state.value === 'true';
   }
 
   return (
