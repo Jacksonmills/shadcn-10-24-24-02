@@ -6,8 +6,8 @@ export async function SidebarProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const cookieState = await cookies();
-  const state = cookieState.get('sidebar:state');
+  const cookieStore = await cookies();
+  const state = cookieStore.get('sidebar:state');
 
   let defaultOpen = true;
   if (state) {
