@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import { FileIcon } from '@radix-ui/react-icons';
+import Image from 'next/image';
 
 export default function Home() {
   return (

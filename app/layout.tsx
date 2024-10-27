@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import { SidebarInset, SidebarTrigger } from '@/components/ui/sidebar';
-import { Separator } from '@/components/ui/separator';
+import { AppSidebar } from '@/components/app-sidebar';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,9 +10,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import Link from 'next/link';
+import { Separator } from '@/components/ui/separator';
+import { SidebarInset, SidebarTrigger } from '@/components/ui/sidebar';
 import { SidebarProvider } from '@/components/ui/sidebar/sidebar-provider';
-import { AppSidebar } from '@/components/app-sidebar';
+import Link from 'next/link';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
